@@ -1,0 +1,14 @@
+nav a{
+    margin-right: 30px;
+}
+a.active{
+    color: rgb(255, 166, 0);
+    font-size: 17px;
+    font-weight: 500;
+   
+}
+nav a:hover{
+    color: orange;
+    border-bottom: 2px solid orange;
+    
+}
