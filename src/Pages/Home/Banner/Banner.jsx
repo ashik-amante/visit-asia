@@ -2,12 +2,12 @@
 
 const Banner = () => {
     return (
-        <div className="max-w-6xl mx-auto mt-10">
+        <div className="max-w-7xl mx-auto mt-10 mb-10">
             <div className="carousel w-full">
                 <div id="slide1" className="carousel-item relative w-full">
                     {/* slider detail with photo */}
                     <div>
-                        <div className="grid grid-cols-2 gap-4">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div className="flex justify-between items-center  p-3">
                                 <div className="space-y-4 p-2">
                                     <h1 className="text-4xl font-bold ">Saint Martin ,  Bangladesh</h1>
@@ -31,7 +31,7 @@ const Banner = () => {
                 <div id="slide2" className="carousel-item relative w-full">
                     {/* slider detail with photo */}
                     <div>
-                        <div className="grid grid-cols-2 gap-4">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div className="flex justify-between items-center  p-3">
                                 <div className="space-y-4 p-2">
                                     <h1 className="text-4xl font-bold ">Gilgit-Baltistan ,  Pakistan</h1>
@@ -55,7 +55,7 @@ const Banner = () => {
                 <div id="slide3" className="carousel-item relative w-full">
                     {/* slider detail with photo */}
                     <div>
-                        <div className="grid grid-cols-2 gap-4">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div className="flex justify-between items-center  p-3">
                                 <div className="space-y-4 p-2">
                                     <h1 className="text-4xl font-bold ">Mekong Delta lush waterway,  Vietnam</h1>
@@ -79,7 +79,7 @@ const Banner = () => {
                 <div id="slide4" className="carousel-item relative w-full">
                     {/* slider detail with photo */}
                     <div>
-                        <div className="grid grid-cols-2 gap-4">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div className="flex justify-between items-center  p-3">
                                 <div className="space-y-4 p-2">
                                     <h1 className="text-4xl font-bold ">Bali,  Indonesia</h1>

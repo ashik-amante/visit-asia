@@ -1,4 +1,5 @@
-
+import Swal from 'sweetalert2'
+// import 'sweetalert2/src/sweetalert2.scss'
 
 const AddSpot = () => {
     const handleAdd = event=>{
@@ -14,7 +15,8 @@ const AddSpot = () => {
         const time = form.time.value;
         const visitor = form.visitor.value;
         const email = form.email.value;
-        const spotDetail = {name,spotname,location,description,cost,country,time,visitor,seasonality,email}
+        const photo = form.photo.value;
+        const spotDetail = {name,spotname,location,description,cost,country,time,visitor,seasonality,email,photo}
        
         console.log(spotDetail);
         fetch('http://localhost:5000/spots',{
@@ -27,6 +29,15 @@ const AddSpot = () => {
         .then(res=>res.json())
         .then(data=>{
             console.log(data);
+            if(data.insertedId){
+                Swal.fire({
+                    title: "Added Successfully!",
+                    icon: "success",
+                    draggable: true,
+                    timer:2000
+                  });
+            }
+            form.reset()
         })
        
     }
@@ -68,7 +79,7 @@ const AddSpot = () => {
                             <div className="label">
                                 <span className="label-text font-semibold">Avetage Cost</span>
                             </div>
-                            <input type="number" name="cost" placeholder="Cost in USD $ " className="input input-bordered w-full" />
+                            <input type="text" name="cost" placeholder="Cost in USD $ " className="input input-bordered w-full" />
                         </label>
                         <label className="form-control md:w-1/2 ">
                             <div className="label">
@@ -82,7 +93,7 @@ const AddSpot = () => {
                             <div className="label">
                                 <span className="label-text font-semibold">Travel Time</span>
                             </div>
-                            <input type="number" name="time" placeholder="Time needed (days) " className="input input-bordered w-full" />
+                            <input type="text" name="time" placeholder="Time needed (days) " className="input input-bordered w-full" />
                         </label>
                         <label className="form-control md:w-1/2 ">
                             <div className="label">
