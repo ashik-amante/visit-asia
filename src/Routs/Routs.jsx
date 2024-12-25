@@ -5,6 +5,8 @@ import AllSpot from "../Pages/AllSpot/AllSpot";
 import AddSpot from "../Pages/AddSpot/AddSpot";
 import MySpot from "../Pages/Myspot/MySpot";
 import Detail from "../Pages/Details/Detail";
+import Register from "../Pages/Register/Register";
+import Login from "../Pages/Login/Login";
 
 
 
@@ -17,6 +19,14 @@ const router = createBrowserRouter([
             path:'/',
             element:<Home></Home>,
             loader: ()=> fetch('http://localhost:5000/spots')
+        },
+        {
+          path:'/register',
+          element:<Register></Register>,
+        },
+        {
+          path:'/login',
+          element: <Login></Login>
         },
         {
             path:'/all',

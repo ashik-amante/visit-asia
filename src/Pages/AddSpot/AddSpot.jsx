@@ -1,7 +1,10 @@
+import { useContext } from 'react';
 import Swal from 'sweetalert2'
+import { AuthContext } from '../../Providers/AuthProvider';
 // import 'sweetalert2/src/sweetalert2.scss'
 
 const AddSpot = () => {
+    const {user} = useContext(AuthContext)
     const handleAdd = event=>{
         event.preventDefault()
         const form = event.target;
@@ -14,7 +17,7 @@ const AddSpot = () => {
         const seasonality = form.seasonality.value;
         const time = form.time.value;
         const visitor = form.visitor.value;
-        const email = form.email.value;
+        const email = user?.email;
         const photo = form.photo.value;
         const spotDetail = {name,spotname,location,description,cost,country,time,visitor,seasonality,email,photo}
        

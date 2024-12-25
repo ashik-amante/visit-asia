@@ -1,5 +1,6 @@
 
-import { useLoaderData, useParams } from 'react-router-dom';
+import { useLoaderData} from 'react-router-dom';
+import { FaRegUser } from "react-icons/fa";
 
 const Detail = () => {
     const spot = useLoaderData()
@@ -7,18 +8,18 @@ const Detail = () => {
     return (
         <div>
             <h1 className='text-4xl font-bold text-center mt-10 mb-4'>{spotname}, {country} </h1>
-            <div className='flex mx-auto justify-center gap-10 mb-8'>
-                <span >icon</span>
+            <div className='flex mx-auto justify-center items-center gap-2 mb-8'>
+                <span className='text-xl'><FaRegUser /></span>
                 <p className='font-semibold'>By: {name}</p>
             </div>
-            <p className='text-[17px] max-w-4xl mx-auto text-center'>{description}</p>
+            <p className='text-[17px] max-w-4xl mx-auto px-12 mb-10 text-center'>{description}</p>
             {/* grid */}
-            <div className='grid grid-cols-2 gap-10'>
+            <div className='grid md:grid-cols-2 gap-10'>
                 <div className='grid col-span-1 border'>
-                    <img className='w-[70%] mx-auto p-4' src={photo} alt="" />
+                    <img className='w-[90%] mx-auto p-4' src={photo} alt="" />
                 </div>
                 <div className='grid col-span-1 border'>
-                    <div className="overflow-x-auto">
+                    <div className="">
                         <table className="table">
                             {/* head */}
                             <thead>
